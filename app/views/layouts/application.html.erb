@@ -12,6 +12,12 @@
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     <%= yield %>
+    <br />
+    <%= link_to "Twitter Feed", feed_path, class:"btn btn-default" %>
+    <br />
+    <tr>
+    <td><%= link_to 'Sign Out', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
 
   </body>
 </html>
